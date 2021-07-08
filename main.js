@@ -34,14 +34,14 @@ class Promedio{
 
 //Validaciones de datos
 function validacionFaltas(faltas){
-    while ( (faltas < 0) || (typeof faltas !== 'number') ) {
+    while ( (faltas < 0) || (isNaN(faltas)) || (faltas==="") ) {
         alert("Número de faltas no válido")
         faltas = parseInt(prompt("Ingrese nuevamente las faltas por favor"))
     }
     return faltas;
 }
 function validacionNotas(dato){
-    while ( (dato < 0) || (dato > 12) || (typeof dato !== 'number') ) {
+    while ( (dato < 0) || (dato > 12) || (isNaN(dato)) || (dato==="") ) {
         alert("Nota no válida");
         dato = parseInt(prompt("Ingrese una nota válida"));
     }
