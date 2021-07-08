@@ -1,3 +1,9 @@
+/* Se agregan los datos de alumnos, y con ellos se calcula el promedio final 
+(el calculo para ello está especificado en el index.html)
+Cada alumno será agregado a un array con todos sus respectivos datos
+El user recibirá como respuesta el promedio final de cada alumno, más su devolucion o juicio
+(si aprobó la materia, debe rendir examen en deciembre o febrero, o si por causa de las inasistencias debe recursar)*/
+
 //Definicion del array
 let alumnos = [];
 
@@ -47,10 +53,18 @@ function validacionNotas(dato){
     }
     return dato;
 }
+function validacionNombre(nombre){
+    while ((!isNaN(nombre)) || (nombre==="")) {
+        alert("Nombre no válido");
+        nombre = prompt("Ingrese un nombre válido");
+    }
+    return nombre.charAt(0).toUpperCase() + nombre.slice(1);
+}
 
 //Funcion para ingreso de datos
 function agregarDatosDeAlumno() {
 	let nombre = prompt("Ingrese el nombre del alumno");
+    nombre = validacionNombre(nombre);
 	let primerEscrito = parseInt(prompt("Ingrese la nota del primer escrito"));
 	primerEscrito = validacionNotas(primerEscrito);
 	let primerParcial = parseInt(prompt("Ingrese la nota del primer parcial"));
@@ -71,7 +85,6 @@ function agregarDatosDeAlumno() {
 const nuevoAlumno = agregarDatosDeAlumno();
 alumnos.push(nuevoAlumno);
 nuevoAlumno.calculoPromedio();
-
 //Devoluciones al user sobre nuevoAlumno
 alert("El promedio final del alumno es: " + nuevoAlumno.promedioFinal);
 nuevoAlumno.devolucion();
@@ -80,7 +93,6 @@ nuevoAlumno.devolucion();
 const nuevoAlumno1 = agregarDatosDeAlumno();
 alumnos.push(nuevoAlumno1);
 nuevoAlumno1.calculoPromedio();
-
 //Devoluciones al user sobre nuevoAlumno1
 alert("El promedio final del alumno es: " + nuevoAlumno1.promedioFinal);
 nuevoAlumno1.devolucion();
@@ -89,7 +101,6 @@ nuevoAlumno1.devolucion();
 const nuevoAlumno2 = agregarDatosDeAlumno();
 alumnos.push(nuevoAlumno2);
 nuevoAlumno2.calculoPromedio();
-
 //Devoluciones al user sobre nuevoAlumno2
 alert("El promedio final del alumno es: " + nuevoAlumno2.promedioFinal);
 nuevoAlumno2.devolucion();
