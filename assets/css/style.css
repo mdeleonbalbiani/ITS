@@ -1,0 +1,182 @@
+body{
+    background-color: #84d7ee;
+}
+header{
+    text-align: center;
+    margin-top: -3%;
+}
+h1{
+    font-family: 'League Script', cursive;
+    text-align: center;
+    font-size: 2.8rem;
+    margin-top: -2%;
+    font-weight: bold;
+    color: #ebba3f;
+    text-shadow: 2px 1px 0 #000000;
+}
+h2{
+    font-size: 1.5rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+h3{
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+}
+h4{
+    margin-left: 5%;
+    font-size: 1.2rem;
+}
+footer{
+    background: rgb(104,171,236);
+    background: linear-gradient(0deg, rgba(104,171,236,0.9094012605042017) 77%, rgba(132,215,238,1) 100%);
+}
+.infoDocente{
+    display: flex;
+    justify-content: space-evenly;
+}
+.subtitle{
+    margin-left: 10%;
+    margin-bottom: -0.2%;
+}
+.btnVer{
+    width: 50%;
+}
+.contenedorLogin{
+    width: 45%;
+    margin-left: auto;
+    padding: 2%;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+.loginH1{
+    margin-top: 0%;
+}
+.loginBoton{
+    text-align: center;
+}
+.aviso{
+    width: 25%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-top: 1%;
+}
+.idGrupo{
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+table{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3%;
+    table-layout: auto;
+    text-align: center;
+    border: 1px solid white;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+.modal-content{
+    background-color: #84d7ee;
+}
+.buttonCloseStudentsModal{
+    float: right;
+}
+.imgStudentsModal{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.modal-body h4{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.modal-body h4, .modal-body h5{
+    margin: 0%;
+    text-align: center;
+}
+.marks{
+    margin: 5%;
+}
+.marks h5{
+    margin-left: 35%;
+    font-size: 1rem;
+}
+label{
+    text-align: center;
+    font-size: 1.2rem;
+}
+input{
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.devoluciones{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.devoluciones__nota{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.devoluciones__nota h5{
+    font-size: 1.3rem;
+    width: 25%;
+    text-align: center;
+}
+.devoluciones__nota h6{
+    width: 30%;
+    height: 5vh;
+    border: 1px solid gray;
+    background-color:rgb(255, 255, 255);
+    margin-left: 2%;
+    border-radius: 5px;
+}
+.devoluciones__juicio{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.devoluciones__juicio h5{
+    font-size: 1.3rem;
+    width: 25%;
+    text-align: center;
+}
+.devoluciones__juicio h6{
+    width: 30%;
+    height: 5vh;
+    border: 1px solid gray;
+    background-color:rgb(255, 255, 255);
+    margin-left: 2%;
+    border-radius: 5px;
+}
+.buttonCalcularPromedio{
+    display: block;
+	text-align:center;
+    margin: auto;
+}
+.form button:disabled {
+background: #82a0a2;
+border: 1px solid #82a0a2;
+color: lightgray;
+}
+.form-box .error-text {
+    color: #ca3434;
+    text-align: center;
+    visibility: hidden;
+}
+.form-box.form-error input {
+border-bottom: 2px solid red;
+}
+.form-box.form-error .error-text {
+visibility: visible;
+}
+.form-box.form-success input {
+border-bottom: 2px solid green;
+}
