@@ -1,0 +1,143 @@
+body{
+    background-color: #84d7ee;
+}
+header{
+    text-align: center;
+    margin-top: -3%;
+}
+h1{
+    font-family: 'League Script', cursive;
+    text-align: center;
+    font-size: 2.8rem;
+    margin-top: -2%;
+    font-weight: bold;
+    color: #ebba3f;
+    text-shadow: 2px 1px 0 #000000;
+}
+h2{
+    font-size: 1.5rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+h3{
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+}
+h4{
+    margin-left: 5%;
+    font-size: 1.2rem;
+}
+footer{
+    background: rgb(104,171,236);
+    background: linear-gradient(0deg, rgba(104,171,236,0.9094012605042017) 77%, rgba(132,215,238,1) 100%);
+}
+.infoDocente{
+    display: flex;
+    justify-content: space-evenly;
+}
+.subtitle{
+    margin-left: 10%;
+    margin-bottom: -0.2%;
+}
+.btnVer{
+    width: 50%;
+}
+.contenedorLogin{
+    width: 45%;
+    margin-left: auto;
+    padding: 2%;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+.loginH1{
+    margin-top: 0%;
+}
+.loginBoton{
+    text-align: center;
+}
+.aviso{
+    width: 25%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-top: 1%;
+}
+.idGrupo{
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+label{
+    text-align: center;
+}
+input{
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+}
+.contenedor{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+form{
+    padding: 0.5%;
+    width: 600px;
+    max-width: 100%;
+    background: #7ccbe0;
+    border-radius: 10px;
+    box-shadow: 0px 5px 16px 0px rgba(50, 50, 50, 0.75);
+}
+.formHidden{
+    visibility: hidden;
+}
+.form-box{
+    margin: 1%;
+}
+.form-box .error-text {
+    color: #ca3434;
+    text-align: center;
+    visibility: hidden;
+}
+.form button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #1e9ba3;
+    border: 1px solid #1e9ba3;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+}
+.form button:disabled {
+background: #82a0a2;
+border: 1px solid #82a0a2;
+color: lightgray;
+}
+.form-box.form-error input {
+border-bottom: 2px solid red;
+}
+.form-box.form-error .error-text {
+visibility: visible;
+}
+.form-box.form-success input {
+border-bottom: 2px solid green;
+}
+.imprimir{
+    padding: 2%;
+    width: 40%;
+    background: #7ccbe0;
+    border-radius: 10px;
+    box-shadow: 0px 5px 16px 0px rgba(50, 50, 50, 0.75);
+}
+
+table{
+    border-spacing:1%;
+}
+#promedio{
+    text-align: center;
+}
+th, td {
+    padding: 1%;
+}
