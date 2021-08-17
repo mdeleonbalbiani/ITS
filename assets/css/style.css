@@ -41,6 +41,16 @@ footer{
 .btnVer{
     width: 50%;
 }
+table{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3%;
+    table-layout: auto;
+    text-align: center;
+    border: 1px solid white;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
 .contenedorLogin{
     width: 45%;
     margin-left: auto;
@@ -48,6 +58,7 @@ footer{
     border: 1px solid white;
     border-radius: 15px;
 }
+
 .loginH1{
     margin-top: 0%;
 }
