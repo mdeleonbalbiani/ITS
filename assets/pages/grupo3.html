@@ -5,1086 +5,150 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../imgs/icon.png">
+    
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!--Fuentes-->
     <link href="https://fonts.googleapis.com/css2?family=League+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
     <!--CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="../plugins/toastr/toastr.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>I.T.S - 2do IA</title>
 </head>
 <body>
     <header>
-        <img src="../imgs/logo.png" alt="Logo">
+        <img src="../imgs/logo.png" alt="Logo" style="width: 35%;">
     </header>
-    <!-- Breadcrumb -->
-    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="container">
-      <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="../../index.html">Sus grupos</a></li>
-          <li class="breadcrumb-item active">Página actual</li>
-      </ol>
-  </nav>
-  <!--Fin Breadcrumb -->
-    <section class="container">
-        <h3 class="idGrupo">2do IA (EMT)</h3>
-        <table>
-            <tr>
-              <th></th>
-              <th>Nro. de Lista</th>
-              <th>Nombre completo</th>
-              <th></th>
-            </tr>
-            <tr>
-                <td><img src="../imgs/estudiante2.png" alt="iconEstudiante"></td>
-                <td>1</td>
-                <td>Albarracín, Sara</td>
-                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#student1">Calcular promedio</td>
-            </tr>
-            <tr>
-                <td><img src="../imgs/estudiante1.png" alt="iconEstudiante"></td>
-                <td>2</td>
-                <td>Baldich, Luis</td>
-                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#student2">Calcular promedio</td>
-            </tr>
-            <tr>
-                <td><img src="../imgs/estudiante1.png" alt="iconEstudiante"></td>
-                <td>3</td>
-                <td>Canceda, Vicente</td>
-                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#student3">Calcular promedio</td>
-            </tr>
-            <tr>
-                <td><img src="../imgs/estudiante1.png" alt="iconEstudiante"></td>
-                <td>4</td>
-                <td>Diaz, Andrés</td>
-                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#student4">Calcular promedio</td>
-            </tr>
-            <tr>
-                <td><img src="../imgs/estudiante2.png" alt="iconEstudiante"></td>
-                <td>5</td>
-                <td>Escobar, Emma</td>
-                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#student5">Calcular promedio</td>
-            </tr>
-            <tr>
-                <td><img src="../imgs/estudiante2.png" alt="iconEstudiante"></td>
-                <td>6</td>
-                <td>Ferrero, Olivia</td>
-                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#student6">Calcular promedio</td>
-            </tr>
-            <tr>
-                <td><img src="../imgs/estudiante1.png" alt="iconEstudiante"></td>
-                <td>7</td>
-                <td>Gaitán, Iván</td>
-                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#student7">Calcular promedio</td>
-            </tr>
-            <tr>
-                <td><img src="../imgs/estudiante2.png" alt="iconEstudiante"></td>
-                <td>8</td>
-                <td>Herrera, Florencia</td>
-                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#student8">Calcular promedio</td>
-            </tr>
-            <tr>
-                <td><img src="../imgs/estudiante1.png" alt="iconEstudiante"></td>
-                <td>9</td>
-                <td>Irigoyen, Marcos</td>
-                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#student9">Calcular promedio</td>
-            </tr>
-            <tr>
-                <td><img src="../imgs/estudiante1.png" alt="iconEstudiante"></td>
-                <td>10</td>
-                <td>Jordana, Guillermo</td>
-                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#student10">Calcular promedio</td>
-            </tr>
-            <tr>
-                <td><img src="../imgs/estudiante2.png" alt="iconEstudiante"></td>
-                <td>11</td>
-                <td>Lazcano, Valentina</td>
-                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#student11">Calcular promedio</td>
-            </tr>
-            <tr>
-                <td><img src="../imgs/estudiante2.png" alt="iconEstudiante"></td>
-                <td>12</td>
-                <td>Ramírez, Antonella</td>
-                <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#student12">Calcular promedio</td>
-            </tr>
-          </table>
+
+    <section class="container centrar">
+        <div class="row">
+            <div class="col-10">
+                <h3 class="idGrupo" id="idGrupo3">2do IA (EMT)</h3>
+                <div class="form-group">
+                    <select class="form-select" aria-label="Default select example" id="seleccion">
+                      <option selected>-- Seleccione un alumno --</option>
+                      <option value="1">1 - Albarracín, Sara</option>
+                      <option value="2">2 - Baldich, Luis</option>
+                      <option value="3">3 - Canceda, Vicente</option>
+                      <option value="4">4 - Diaz, Andrés</option>
+                      <option value="5">5 - Escobar, Emma</option>
+                      <option value="6">6 - Ferrero, Olivia</option>
+                      <option value="7">7 - Gaitán, Iván</option>
+                      <option value="8">8 - Herrera, Florencia</option>
+                      <option value="9">9 - Irigoyen, Marcos</option>
+                      <option value="10">10 - Jordana, Guillermo</option>
+                      <option value="11">11 -Lazcano, Valentina</option>
+                      <option value="12">12 -Ramírez, Antonella</option>
+                    </select>
+                </div>
+            </div>
+           
+    
+            <div class="btn-sidebar col">
+                <a type="button" class="btn resultados" data-bs-toggle="modal" data-bs-target="#modal"><img src="../imgs/grupo1.png" alt=""></a>
+            </div>
+        </div>
+        
     </section>
-    <!-- Modal 1-->
-    <div class="modal fade" id="student1" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <button type="button" class="btn-close buttonCloseStudentsModal" data-bs-dismiss="modal" aria-label="Close"></button>
-            <img src="../imgs/modal-estudiante2.png" class="imgStudentsModal" salt="iconEstudiante">
-            <h4>Albarracín, Sara</h4>
-            <h5>Nro. de lista: 1</h5>
-            <div class="marks">
-              <h5>Notas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="primerEscrito" class="col-sm-4 col-form-label">Escrito Abril/Mayo</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="primerParcial" class="col-sm-4 col-form-label">Primer parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoEscrito" class="col-sm-4 col-form-label">Escrito Julio/Agosto</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoParcial" class="col-sm-4 col-form-label">Segundo parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="tercerEscrito" class="col-sm-4 col-form-label">Escrito Octubre/Noviembre</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="tercerEscrito">
-                  </div>
-                </div>
-              </form>
-              <h5>Número de faltas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="faltas" class="col-sm-4 col-form-label"></label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="faltas">
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="buttonCalcularPromedio">
-              <button type="button" class="btn btn-primary">Calcular promedio</button>
-            </div>
-            <div class="devoluciones">
-              <form>
-                <div class="form-group row">
-                  <label for="notaFinal" class="col-sm-4 col-form-label">Nota:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="notaFinal">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="juicio" class="col-sm-4 col-form-label">Devolución:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="juicio">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Guardar</button>
-          </div>
-        </div>
-        </div>
-    </div>
-      <!-- Fin Modal -->
-      <!-- Modal 2-->
-    <div class="modal fade" id="student2" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <button type="button" class="btn-close buttonCloseStudentsModal" data-bs-dismiss="modal" aria-label="Close"></button>
-            <img src="../imgs/modal-estudiante1.png" class="imgStudentsModal" salt="iconEstudiante">
-            <h4>Baldich, Luis</h4>
-            <h5>Nro. de lista: 2</h5>
-            <div class="marks">
-              <h5>Notas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="primerEscrito" class="col-sm-4 col-form-label">Escrito Abril/Mayo</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="primerParcial" class="col-sm-4 col-form-label">Primer parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoEscrito" class="col-sm-4 col-form-label">Escrito Julio/Agosto</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoParcial" class="col-sm-4 col-form-label">Segundo parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="tercerEscrito" class="col-sm-4 col-form-label">Escrito Octubre/Noviembre</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="tercerEscrito">
-                  </div>
-                </div>
-              </form>
-              <h5>Número de faltas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="faltas" class="col-sm-4 col-form-label"></label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="faltas">
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="buttonCalcularPromedio">
-              <button type="button" class="btn btn-primary">Calcular promedio</button>
-            </div>
-            <div class="devoluciones">
-              <form>
-                <div class="form-group row">
-                  <label for="notaFinal" class="col-sm-4 col-form-label">Nota:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="notaFinal">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="juicio" class="col-sm-4 col-form-label">Devolución:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="juicio">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Guardar</button>
-          </div>
-        </div>
-        </div>
-    </div>
-      <!-- Fin Modal -->
-      <!-- Modal 3-->
-    <div class="modal fade" id="student3" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <button type="button" class="btn-close buttonCloseStudentsModal" data-bs-dismiss="modal" aria-label="Close"></button>
-            <img src="../imgs/modal-estudiante1.png" class="imgStudentsModal" salt="iconEstudiante">
-            <h4>Canceda, Vicente</h4>
-            <h5>Nro. de lista: 3</h5>
-            <div class="marks">
-              <h5>Notas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="primerEscrito" class="col-sm-4 col-form-label">Escrito Abril/Mayo</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="primerParcial" class="col-sm-4 col-form-label">Primer parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoEscrito" class="col-sm-4 col-form-label">Escrito Julio/Agosto</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoParcial" class="col-sm-4 col-form-label">Segundo parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="tercerEscrito" class="col-sm-4 col-form-label">Escrito Octubre/Noviembre</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="tercerEscrito">
-                  </div>
-                </div>
-              </form>
-              <h5>Número de faltas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="faltas" class="col-sm-4 col-form-label"></label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="faltas">
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="buttonCalcularPromedio">
-              <button type="button" class="btn btn-primary">Calcular promedio</button>
-            </div>
-            <div class="devoluciones">
-              <form>
-                <div class="form-group row">
-                  <label for="notaFinal" class="col-sm-4 col-form-label">Nota:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="notaFinal">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="juicio" class="col-sm-4 col-form-label">Devolución:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="juicio">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Guardar</button>
-          </div>
-        </div>
-        </div>
-    </div>
-      <!-- Fin Modal -->  
-      <!-- Modal 4-->
-    <div class="modal fade" id="student4" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <button type="button" class="btn-close buttonCloseStudentsModal" data-bs-dismiss="modal" aria-label="Close"></button>
-            <img src="../imgs/modal-estudiante1.png" class="imgStudentsModal" salt="iconEstudiante">
-            <h4>Diaz, Andrés</h4>
-            <h5>Nro. de lista: 4</h5>
-            <div class="marks">
-              <h5>Notas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="primerEscrito" class="col-sm-4 col-form-label">Escrito Abril/Mayo</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="primerParcial" class="col-sm-4 col-form-label">Primer parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoEscrito" class="col-sm-4 col-form-label">Escrito Julio/Agosto</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoParcial" class="col-sm-4 col-form-label">Segundo parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="tercerEscrito" class="col-sm-4 col-form-label">Escrito Octubre/Noviembre</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="tercerEscrito">
-                  </div>
-                </div>
-              </form>
-              <h5>Número de faltas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="faltas" class="col-sm-4 col-form-label"></label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="faltas">
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="buttonCalcularPromedio">
-              <button type="button" class="btn btn-primary">Calcular promedio</button>
-            </div>
-            <div class="devoluciones">
-              <form>
-                <div class="form-group row">
-                  <label for="notaFinal" class="col-sm-4 col-form-label">Nota:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="notaFinal">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="juicio" class="col-sm-4 col-form-label">Devolución:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="juicio">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Guardar</button>
-          </div>
-        </div>
-        </div>
-    </div>
-      <!-- Fin Modal -->
-      <!-- Modal 5-->
-    <div class="modal fade" id="student5" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <button type="button" class="btn-close buttonCloseStudentsModal" data-bs-dismiss="modal" aria-label="Close"></button>
-            <img src="../imgs/modal-estudiante2.png" class="imgStudentsModal" salt="iconEstudiante">
-            <h4>Escobar, Emma</h4>
-            <h5>Nro. de lista: 5</h5>
-            <div class="marks">
-              <h5>Notas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="primerEscrito" class="col-sm-4 col-form-label">Escrito Abril/Mayo</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="primerParcial" class="col-sm-4 col-form-label">Primer parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoEscrito" class="col-sm-4 col-form-label">Escrito Julio/Agosto</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoParcial" class="col-sm-4 col-form-label">Segundo parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="tercerEscrito" class="col-sm-4 col-form-label">Escrito Octubre/Noviembre</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="tercerEscrito">
-                  </div>
-                </div>
-              </form>
-              <h5>Número de faltas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="faltas" class="col-sm-4 col-form-label"></label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="faltas">
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="buttonCalcularPromedio">
-              <button type="button" class="btn btn-primary">Calcular promedio</button>
-            </div>
-            <div class="devoluciones">
-              <form>
-                <div class="form-group row">
-                  <label for="notaFinal" class="col-sm-4 col-form-label">Nota:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="notaFinal">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="juicio" class="col-sm-4 col-form-label">Devolución:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="juicio">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Guardar</button>
-          </div>
-        </div>
-        </div>
-    </div>
-      <!-- Fin Modal -->
-      <!-- Modal 6-->
-    <div class="modal fade" id="student6" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <button type="button" class="btn-close buttonCloseStudentsModal" data-bs-dismiss="modal" aria-label="Close"></button>
-            <img src="../imgs/modal-estudiante2.png" class="imgStudentsModal" salt="iconEstudiante">
-            <h4>Ferrero, Olivia</h4>
-            <h5>Nro. de lista: 6</h5>
-            <div class="marks">
-              <h5>Notas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="primerEscrito" class="col-sm-4 col-form-label">Escrito Abril/Mayo</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="primerParcial" class="col-sm-4 col-form-label">Primer parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoEscrito" class="col-sm-4 col-form-label">Escrito Julio/Agosto</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoParcial" class="col-sm-4 col-form-label">Segundo parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="tercerEscrito" class="col-sm-4 col-form-label">Escrito Octubre/Noviembre</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="tercerEscrito">
-                  </div>
-                </div>
-              </form>
-              <h5>Número de faltas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="faltas" class="col-sm-4 col-form-label"></label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="faltas">
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="buttonCalcularPromedio">
-              <button type="button" class="btn btn-primary">Calcular promedio</button>
-            </div>
-            <div class="devoluciones">
-              <form>
-                <div class="form-group row">
-                  <label for="notaFinal" class="col-sm-4 col-form-label">Nota:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="notaFinal">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="juicio" class="col-sm-4 col-form-label">Devolución:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="juicio">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Guardar</button>
-          </div>
-        </div>
-        </div>
-    </div>
-      <!-- Fin Modal -->
-      <!-- Modal 7-->
-    <div class="modal fade" id="student7" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <button type="button" class="btn-close buttonCloseStudentsModal" data-bs-dismiss="modal" aria-label="Close"></button>
-            <img src="../imgs/modal-estudiante1.png" class="imgStudentsModal" salt="iconEstudiante">
-            <h4>Gaitán, Iván</h4>
-            <h5>Nro. de lista: 7</h5>
-            <div class="marks">
-              <h5>Notas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="primerEscrito" class="col-sm-4 col-form-label">Escrito Abril/Mayo</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="primerParcial" class="col-sm-4 col-form-label">Primer parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoEscrito" class="col-sm-4 col-form-label">Escrito Julio/Agosto</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoParcial" class="col-sm-4 col-form-label">Segundo parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="tercerEscrito" class="col-sm-4 col-form-label">Escrito Octubre/Noviembre</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="tercerEscrito">
-                  </div>
-                </div>
-              </form>
-              <h5>Número de faltas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="faltas" class="col-sm-4 col-form-label"></label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="faltas">
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="buttonCalcularPromedio">
-              <button type="button" class="btn btn-primary">Calcular promedio</button>
-            </div>
-            <div class="devoluciones">
-              <form>
-                <div class="form-group row">
-                  <label for="notaFinal" class="col-sm-4 col-form-label">Nota:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="notaFinal">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="juicio" class="col-sm-4 col-form-label">Devolución:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="juicio">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Guardar</button>
-          </div>
-        </div>
-        </div>
-    </div>
-    <!-- Fin Modal -->
-    <!-- Modal 8-->
-    <div class="modal fade" id="student8" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <button type="button" class="btn-close buttonCloseStudentsModal" data-bs-dismiss="modal" aria-label="Close"></button>
-            <img src="../imgs/modal-estudiante2.png" class="imgStudentsModal" salt="iconEstudiante">
-            <h4>Herrera, Florencia</h4>
-            <h5>Nro. de lista: 8</h5>
-            <div class="marks">
-              <h5>Notas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="primerEscrito" class="col-sm-4 col-form-label">Escrito Abril/Mayo</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="primerParcial" class="col-sm-4 col-form-label">Primer parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoEscrito" class="col-sm-4 col-form-label">Escrito Julio/Agosto</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoParcial" class="col-sm-4 col-form-label">Segundo parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="tercerEscrito" class="col-sm-4 col-form-label">Escrito Octubre/Noviembre</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="tercerEscrito">
-                  </div>
-                </div>
-              </form>
-              <h5>Número de faltas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="faltas" class="col-sm-4 col-form-label"></label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="faltas">
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="buttonCalcularPromedio">
-              <button type="button" class="btn btn-primary">Calcular promedio</button>
-            </div>
-            <div class="devoluciones">
-              <form>
-                <div class="form-group row">
-                  <label for="notaFinal" class="col-sm-4 col-form-label">Nota:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="notaFinal">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="juicio" class="col-sm-4 col-form-label">Devolución:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="juicio">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Guardar</button>
-          </div>
-        </div>
-        </div>
-    </div>
-      <!-- Fin Modal -->
-      <!-- Modal 9-->
-    <div class="modal fade" id="student9" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <button type="button" class="btn-close buttonCloseStudentsModal" data-bs-dismiss="modal" aria-label="Close"></button>
-            <img src="../imgs/modal-estudiante1.png" class="imgStudentsModal" salt="iconEstudiante">
-            <h4>Irigoyen, Marcos</h4>
-            <h5>Nro. de lista: 9</h5>
-            <div class="marks">
-              <h5>Notas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="primerEscrito" class="col-sm-4 col-form-label">Escrito Abril/Mayo</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="primerParcial" class="col-sm-4 col-form-label">Primer parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoEscrito" class="col-sm-4 col-form-label">Escrito Julio/Agosto</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoParcial" class="col-sm-4 col-form-label">Segundo parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="tercerEscrito" class="col-sm-4 col-form-label">Escrito Octubre/Noviembre</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="tercerEscrito">
-                  </div>
-                </div>
-              </form>
-              <h5>Número de faltas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="faltas" class="col-sm-4 col-form-label"></label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="faltas">
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="buttonCalcularPromedio">
-              <button type="button" class="btn btn-primary">Calcular promedio</button>
-            </div>
-            <div class="devoluciones">
-              <form>
-                <div class="form-group row">
-                  <label for="notaFinal" class="col-sm-4 col-form-label">Nota:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="notaFinal">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="juicio" class="col-sm-4 col-form-label">Devolución:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="juicio">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Guardar</button>
-          </div>
-        </div>
-        </div>
-    </div>
-      <!-- Fin Modal -->
-      <!-- Modal 10-->
-    <div class="modal fade" id="student10" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <button type="button" class="btn-close buttonCloseStudentsModal" data-bs-dismiss="modal" aria-label="Close"></button>
-            <img src="../imgs/modal-estudiante1.png" class="imgStudentsModal" salt="iconEstudiante">
-            <h4>Jordana, Guillermo</h4>
-            <h5>Nro. de lista: 10</h5>
-            <div class="marks">
-              <h5>Notas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="primerEscrito" class="col-sm-4 col-form-label">Escrito Abril/Mayo</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="primerParcial" class="col-sm-4 col-form-label">Primer parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoEscrito" class="col-sm-4 col-form-label">Escrito Julio/Agosto</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoParcial" class="col-sm-4 col-form-label">Segundo parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="tercerEscrito" class="col-sm-4 col-form-label">Escrito Octubre/Noviembre</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="tercerEscrito">
-                  </div>
-                </div>
-              </form>
-              <h5>Número de faltas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="faltas" class="col-sm-4 col-form-label"></label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="faltas">
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="buttonCalcularPromedio">
-              <button type="button" class="btn btn-primary">Calcular promedio</button>
-            </div>
-            <div class="devoluciones">
-              <form>
-                <div class="form-group row">
-                  <label for="notaFinal" class="col-sm-4 col-form-label">Nota:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="notaFinal">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="juicio" class="col-sm-4 col-form-label">Devolución:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="juicio">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Guardar</button>
-          </div>
-        </div>
-        </div>
-    </div>
-      <!-- Fin Modal -->
-      <!-- Modal 11-->
-    <div class="modal fade" id="student11" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <button type="button" class="btn-close buttonCloseStudentsModal" data-bs-dismiss="modal" aria-label="Close"></button>
-            <img src="../imgs/modal-estudiante2.png" class="imgStudentsModal" salt="iconEstudiante">
-            <h4>Lazcano, Valentina</h4>
-            <h5>Nro. de lista: 11</h5>
-            <div class="marks">
-              <h5>Notas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="primerEscrito" class="col-sm-4 col-form-label">Escrito Abril/Mayo</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="primerParcial" class="col-sm-4 col-form-label">Primer parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoEscrito" class="col-sm-4 col-form-label">Escrito Julio/Agosto</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoEscrito">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="segundoParcial" class="col-sm-4 col-form-label">Segundo parcial</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoParcial">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="tercerEscrito" class="col-sm-4 col-form-label">Escrito Octubre/Noviembre</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="tercerEscrito">
-                  </div>
-                </div>
-              </form>
-              <h5>Número de faltas</h5>
-              <form>
-                <div class="form-group row">
-                  <label for="faltas" class="col-sm-4 col-form-label"></label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="faltas">
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="buttonCalcularPromedio">
-              <button type="button" class="btn btn-primary">Calcular promedio</button>
-            </div>
-            <div class="devoluciones">
-              <form>
-                <div class="form-group row">
-                  <label for="notaFinal" class="col-sm-4 col-form-label">Nota:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="notaFinal">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="juicio" class="col-sm-4 col-form-label">Devolución:</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="juicio">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Guardar</button>
-          </div>
-        </div>
-        </div>
-    </div>
-    <!-- Fin Modal -->
-    <!-- Modal 12-->
-    <div class="modal fade" id="student12" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-        <div class="modal-body">
-            <button type="button" class="btn-close buttonCloseStudentsModal" data-bs-dismiss="modal" aria-label="Close"></button>
-            <img src="../imgs/modal-estudiante2.png" class="imgStudentsModal" salt="iconEstudiante">
-            <h4>Ramírez, Antonella</h4>
-            <h5>Nro. de lista: 11</h5>
-            <div class="marks">
-            <h5>Notas</h5>
-            <form>
-                <div class="form-group row">
-                <label for="primerEscrito" class="col-sm-4 col-form-label">Escrito Abril/Mayo</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerEscrito">
-                </div>
-                </div>
-                <div class="form-group row">
-                <label for="primerParcial" class="col-sm-4 col-form-label">Primer parcial</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="primerParcial">
-                </div>
-                </div>
-                <div class="form-group row">
-                <label for="segundoEscrito" class="col-sm-4 col-form-label">Escrito Julio/Agosto</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoEscrito">
-                </div>
-                </div>
-                <div class="form-group row">
-                <label for="segundoParcial" class="col-sm-4 col-form-label">Segundo parcial</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="segundoParcial">
-                </div>
-                </div>
-                <div class="form-group row">
-                <label for="tercerEscrito" class="col-sm-4 col-form-label">Escrito Octubre/Noviembre</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="tercerEscrito">
-                </div>
-                </div>
+
+    <section class="container contenedor">
+        <div>
+            <form action="" class="form formHidden" id="user-form" autocomplete="off">
+                <!--Escrito 1-->
+                <div class="form-box form-group row">
+                    <label for="primerEscrito" class="col-sm-4 col-form-label">Escrito Abril/Mayo</label>
+                    <input type="text" id="primerEscrito" name="primerEscrito" class="col-sm-8">
+                    <small class="error-text">*Introduce una nota válida. Solo números entre 1 y 12</small>
+                </div>
+        
+                <!--Parcial 1-->
+                <div class="form-box form-group row">
+                    <label for="primerParcial" class="col-sm-4 col-form-label">Primer parcial</label>
+                    <input type="text" id="primerParcial" name="primerParcial" class="col-sm-8">
+                    <small class="error-text">*Introduce una nota válida. Solo números entre 1 y 12</small>
+                </div>
+        
+                <!--Escrito 2-->
+                <div class="form-box form-group row">
+                    <label for="segundoEscrito" class="col-sm-4 col-form-label">Escrito Julio/Agosto</label>
+                    <input type="text" id="segundoEscrito" name="segundoEscrito" class="col-sm-8">
+                    <small class="error-text">*Introduce una nota válida. Solo números entre 1 y 12</small>
+                </div>
+        
+                <!--Parcial 2-->
+                <div class="form-box form-group row">
+                    <label for="segundoParcial" class="col-sm-4 col-form-label">Segundo parcial</label>
+                    <input type="text" id="segundoParcial" name="segundoParcial" class="col-sm-8">
+                    <small class="error-text">*Introduce una nota válida. Solo números entre 1 y 12</small>
+                </div>
+        
+                <!--Escrito 3-->
+                <div class="form-box form-group row">
+                    <label for="tercerEscrito" class="col-sm-4 col-form-label">Escrito Octubre/Noviembre</label>
+                    <input type="text" id="tercerEscrito" name="tercerEscrito" class="col-sm-8">
+                    <small class="error-text">*Introduce una nota válida. Solo números entre 1 y 12</small>
+                </div>
+        
+                <!--Faltas-->
+                <div class="form-box form-group row">
+                    <label for="faltas" class="col-sm-4 col-form-label">Número de faltas</label>
+                    <input type="text" id="faltas" name="faltas" class="col-sm-8">
+                    <small class="error-text">*Introduce una número de faltas válido. Solo números mayores a 1</small>
+                </div>
+        
+                <!--Boton-->
+                <button type="submit" id="submit-btn" disabled>Calcular</button>
             </form>
-            <h5>Número de faltas</h5>
-            <form>
-                <div class="form-group row">
-                <label for="faltas" class="col-sm-4 col-form-label"></label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="faltas">
-                </div>
-                </div>
-            </form>
-            </div>
-            <div class="buttonCalcularPromedio">
-            <button type="button" class="btn btn-primary">Calcular promedio</button>
-            </div>
-            <div class="devoluciones">
-            <form>
-                <div class="form-group row">
-                <label for="notaFinal" class="col-sm-4 col-form-label">Nota:</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="notaFinal">
-                </div>
-                </div>
-                <div class="form-group row">
-                <label for="juicio" class="col-sm-4 col-form-label">Devolución:</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" disabled id="juicio">
-                </div>
-                </div>
-            </form>
+    
+        </div>
+        
+
+        <div class="calendario text-center">
+            <button type="button" class="btn btn-primary" id="botonCalendario">Mostrar calendario de feriados</button>
+            <div id="feriados" class="row ">
             </div>
         </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Guardar</button>
-        </div>
+    </section>
+
+     <!-- Modal Promedios -->
+     <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div>
+                    <img src="../imgs/grupo.png" alt="iconGrupo" class="iconoGrupo">
+                    <div class="imprimir row" id="imprimir">
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
         </div>
         </div>
     </div>
-    <!-- Fin Modal -->
-    <!-- Breadcrumb -->
-    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="container">
-      <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="../../index.html">Sus grupos</a></li>
-          <li class="breadcrumb-item active">Página actual</li>
-      </ol>
-    </nav>
-    <!--Fin Breadcrumb -->
-      <footer class="bg-light text-center text-lg-start">
+
+    <footer class="bg-light text-center text-lg-start">
         <div class="text-center p-3">
           © 2021 Copyright:
           <a class="text-dark" href="https://www.linkedin.com/in/deleonmartina/" target="_blank">Instituto Superior en Sueños</a>
         </div>
       </footer>
 
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../plugins/toastr/toastr.min.js"></script>
     <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../js/validaciones.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/seleccionDatos.js"></script>
+    <script src="../js/api.js"></script>
+
+    
 </body>
 </html>
