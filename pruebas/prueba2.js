@@ -3,8 +3,7 @@ const form = document.getElementById('user-form');
 const submitButton = document.getElementById('submit-btn');
 
 let timeout = null;
-
-//Objeto para validacion de errores en input y usarlo para habilitación de boton
+  //Objeto para validacion de errores en input y usarlo para habilitación de boton
 let errors = {
     primerEscrito: true,
     primerParcial: true,
@@ -187,20 +186,22 @@ class Promedio{
     calculoPromedio(){
         let promedioParciales = (this.primerParcial + this.segundoParcial)*0.75;
         let promedioEscritos = (this.primerEscrito + this.segundoEscrito + this.tercerEscrito)*0.25;
-        return this.promedioFinal = (promedioEscritos + promedioParciales)/2;
+        this.promedioFinal = (promedioEscritos + promedioParciales) / 2;
+        return this.promedioFinal;
     }
     devolucion() {
         if (this.faltas < 22) {
             if (this.promedioFinal < 7 && this.promedioFinal >= 4) {
-                return this.devolucionFinal = "El alumno debe rendir examen en diciembre";
+                this.devolucionFinal = "El alumno debe rendir examen en diciembre";
             } else if (this.promedioFinal < 4) {
-                return this.devolucionFinal = "El alumno debe rendir examen en febrero";
+                this.devolucionFinal = "El alumno debe rendir examen en febrero";
             } else if (this.promedioFinal > 7){
-                return this.devolucionFinal = "El alumno aprobó la materia con nota " + this.promedioFinal;
+                this.devolucionFinal = "El alumno aprobó la materia con nota " + this.promedioFinal;
             }
         }else{
-            return this.devolucionFinal = "El alumno debe recursar la materia, no llego a las asistencias minimas necesarias";
+            this.devolucionFinal = "El alumno debe recursar la materia, no llego a las asistencias minimas necesarias";
         }
+        return this.devolucionFinal;
     }
 }
 
@@ -214,7 +215,7 @@ let btnGuardar = document.getElementById("submit-btn");
 
 // FUNCIONES
 function guardarDatos(e) {
-    //e.preventDefault();
+    e.preventDefault();
     let nombre = sessionStorage.getItem('Nombre');
     let primerEscrito = document.getElementById("primerEscrito").value;
     let primerParcial = document.getElementById("primerParcial").value;
@@ -223,29 +224,75 @@ function guardarDatos(e) {
     let tercerEscrito = document.getElementById("tercerEscrito").value;
     let faltas = document.getElementById("faltas").value;
 
-    const listaAlumnos = JSON.parse(localStorage.getItem("alumnos"));
-    //console.log(listaAlumnos);
-    if (localStorage.getItem("alumnos") != null) {
-        let alumno = new Promedio(nombre, primerEscrito, primerParcial, segundoEscrito, segundoParcial, tercerEscrito, faltas);
+    let listaAlumnos = []
+    listaAlumnos = JSON.parse(localStorage.getItem("alumnos"));
+
+    if (localStorage.getItem("alumnos" != null)) {
+        listaAlumnos.push(new Promedio(nombre, primerEscrito, primerParcial, segundoEscrito, segundoParcial, tercerEscrito, faltas));
+
+        for (let i = 0; i < listaAlumnos.length; i++) {
+            alumnos[i].calculoPromedio();
+            alumnos[i].devolucion();
+        }
+        localStorage.setItem("listaAlumnos", JSON.stringify(alumnos));
+    }
+    else{
+        localStorage.clear();
+        alumnos.push(new Promedio(nombre, primerEscrito, primerParcial, segundoEscrito, segundoParcial, tercerEscrito, faltas));
+
+        for (let i = 0; i < alumnos.length; i++) {
+        alumnos[i].calculoPromedio();
+        alumnos[i].devolucion();
+        }
+        localStorage.setItem("alumnos", JSON.stringify(alumnos));
+    }
+    
+
+    // Get the existing data
+   // let existing = localStorage.getItem("alumnos");
+
+    // If no existing data, create an array
+    // Otherwise, convert the localStorage string to an array
+   // existing = existing ? existing.split(',') : [];
+
+    // Add new data to localStorage Array
+  /*   existing.push(new Promedio(nombre, primerEscrito, primerParcial, segundoEscrito, segundoParcial, tercerEscrito, faltas));
+    existing.forEach(alumno => {
         alumno.calculoPromedio();
         alumno.devolucion();
-        listaAlumnos.push(alumno);
-        
-        localStorage.setItem("alumnos", JSON.stringify(listaAlumnos));
+    }); */
+
+    // Save back to localStorage
+    //localStorage.setItem("alumnos", JSON.stringify(existing));
+
+
+    //const listaAlumnos = JSON.parse(localStorage.getItem("alumnos"));
+    //console.log(typeof listaAlumnos, " Variable lista alumnos: ", listaAlumnos);
+
+    /* if (localStorage.getItem("alumnos") != null) {
+        alumnos.push(new Promedio(nombre, primerEscrito, primerParcial, segundoEscrito, segundoParcial, tercerEscrito, faltas));
+        alumnos.forEach(alumno => {
+            alumno.calculoPromedio();
+            console.log("Resultado funcion calcular promedio: ", alumno.calculoPromedio());
+            alumno.devolucion();
+        });
+        localStorage.setItem("alumnos", JSON.stringify(alumnos));
     }
     else {
         localStorage.clear();
-        let alumno = new Promedio(nombre, primerEscrito, primerParcial, segundoEscrito, segundoParcial, tercerEscrito, faltas);
-        alumno.calculoPromedio();
-        alumno.devolucion();
-        alumnos.push(alumno);
-        
+        alumnos.push(new Promedio(nombre, primerEscrito, primerParcial, segundoEscrito, segundoParcial, tercerEscrito, faltas));
+        alumnos.forEach(alumno => {
+            alumno.calculoPromedio();
+            alumno.devolucion();
+        });
         localStorage.setItem("alumnos", JSON.stringify(alumnos));
     }
+    mostrar() */
 }
 
 function mostrar() {
     const imprimirDatos = JSON.parse(localStorage.getItem("alumnos"));
+    //console.log("Var imprimirDatos: ", imprimirDatos);
     if (imprimirDatos != null) {
         imprimirDatos.forEach(element => {
             let tabla = document.createElement("tr")

@@ -1,110 +1,8 @@
-const form = document.getElementById('user-form');
-const submitButton = document.getElementsByClassName('btnSubmit');
+// ENTIDAD
 
-let timeout = null;
-    //Objeto para validacion de errores en input y usarlo para habilitación de boton
-let errors = {
-    primerEscrito: true,
-    primerParcial: true,
-    segundoEscrito: true,
-    segundoParcial: true,
-    tercerEscrito: true,
-    faltas: true,
-}
-
-document.querySelectorAll('.form-box').forEach((box) => {
-  const boxInput = box.querySelector('input');
-
-  boxInput.addEventListener('keydown', (event) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      validation(box, boxInput);
-    }, 300);
-  });
-});
-
-    //Funcion para validacion de inputs
-validation = (box, boxInput) => {
-
-    if (boxInput.name == 'primerEscrito') {
-        if ((boxInput.value < 0) || (boxInput.value > 12) || (isNaN(boxInput.value)) || (boxInput.value==="")) {
-            showError(true, box, boxInput);
-          } else {
-            showError(false, box, boxInput);
-          }
-    }
-
-    if (boxInput.name == 'primerParcial') {
-        if ((boxInput.value < 0) || (boxInput.value > 12) || (isNaN(boxInput.value)) || (boxInput.value==="")) {
-            showError(true, box, boxInput);
-          } else {
-            showError(false, box, boxInput);
-          }
-    }
-
-    if (boxInput.name == 'segundoEscrito') {
-        if ((boxInput.value < 0) || (boxInput.value > 12) || (isNaN(boxInput.value)) || (boxInput.value==="")) {
-            showError(true, box, boxInput);
-          } else {
-            showError(false, box, boxInput);
-          }
-    }
-
-    if (boxInput.name == 'segundoParcial') {
-        if ((boxInput.value < 0) || (boxInput.value > 12) || (isNaN(boxInput.value)) || (boxInput.value==="")) {
-            showError(true, box, boxInput);
-          } else {
-            showError(false, box, boxInput);
-          }
-    }
-
-    if (boxInput.name == 'tercerEscrito') {
-        if ((boxInput.value < 0) || (boxInput.value > 12) || (isNaN(boxInput.value)) || (boxInput.value==="")) {
-            showError(true, box, boxInput);
-          } else {
-            showError(false, box, boxInput);
-          }
-    }
-
-    if (boxInput.name == 'faltas') {
-        if ((boxInput.value < 0) || (isNaN(boxInput.value)) || (boxInput.value==="")) {
-            showError(true, box, boxInput);
-          } else {
-            showError(false, box, boxInput);
-          }
-    }
-    //Llamada de la funcion para habilitar/deshabilitar boton
-    submitController();
-};
-
-    //Funcion para agregar clases de error o success
-showError = (check, box, boxInput) => {
-  if (check) {
-    box.classList.remove('form-success');
-    box.classList.add('form-error');
-    errors[boxInput.name] = true;
-  } else {
-    box.classList.remove('form-error');
-    box.classList.add('form-success');
-    errors[boxInput.name] = false;
-  }
-};
-
-    //Funcion para habilitar o deshabilitar el boton
-function submitController(){
-    if (errors.primerEscrito || errors.primerParcial || errors.segundoEscrito || errors.segundoParcial || errors.tercerEscrito || errors.faltas) {
-        submitButton.toggleAttribute('disabled', true)
-    } else {
-        submitButton.toggleAttribute('disabled', false)
-    }
-}
-
-    //Declaracion del array
-let alumnos = [];
-
-    //Creacion de la clase contructora con sus funciones
 class Promedio{
-    constructor(primerEscrito, primerParcial, segundoEscrito, segundoParcial, tercerEscrito, faltas) {
+    constructor(nombre, primerEscrito, primerParcial, segundoEscrito, segundoParcial, tercerEscrito, faltas, idGrupo) {
+        this.nombre = nombre;
         this.primerEscrito = Number(primerEscrito);
         this.primerParcial = Number(primerParcial);
         this.segundoEscrito = Number(segundoEscrito);
@@ -112,51 +10,166 @@ class Promedio{
         this.tercerEscrito = Number(tercerEscrito);
         this.faltas = Number(faltas);
         this.promedioFinal;
+        this.devolucionFinal;
+        this.idGrupo = idGrupo;
     }
     calculoPromedio(){
         let promedioParciales = (this.primerParcial + this.segundoParcial)*0.75;
         let promedioEscritos = (this.primerEscrito + this.segundoEscrito + this.tercerEscrito)*0.25;
-        this.promedioFinal = (promedioEscritos + promedioParciales)/2;
+        return this.promedioFinal = (promedioEscritos + promedioParciales)/2;
     }
     devolucion() {
         if (this.faltas < 22) {
             if (this.promedioFinal < 7 && this.promedioFinal >= 4) {
-                return "El alumno debe rendir examen en diciembre";
+                return this.devolucionFinal = "El alumno debe rendir examen en diciembre";
             } else if (this.promedioFinal < 4) {
-                return"El alumno debe rendir examen en febrero";
+                return this.devolucionFinal = "El alumno debe rendir examen en febrero";
             } else if (this.promedioFinal > 7){
-                return "El alumno aprobó la materia con nota " + this.promedioFinal;
+                return this.devolucionFinal = "El alumno aprobó la materia con nota " + this.promedioFinal;
             }
         }else{
-            return "El alumno debe recursar la materia, no llego a las asistencias minimas necesarias";
+            return this.devolucionFinal = "El alumno debe recursar la materia, no llego a las asistencias minimas necesarias";
         }
     }
 }
-function mostrar(e) {
-        //Previene que se refresque la página
+
+// ARRAY
+let alumnos = [];
+
+// --
+let btnGuardar = document.getElementById("submit-btn");
+
+// FUNCIONES
+
+mensajeExito = () => {toastr["success"]("Calculado su promedio final y generada su devolución", "Alumno cargado exitosamente");}
+mensajeError = () => {toastr["error"]("El promedio de esta alumno ya fue calculado y guardado", "Alumno ya ingresado");}
+
+
+function guardarDatos(e){
     e.preventDefault();
-        //Se remueve el evento para que no se pueda calcular más que una vez
-    e.target.removeEventListener(e.type, mostrar);
-        //Lectura de valores de cada input y se guardan en variables
+
+    let identificatorioGrupo = 0;
+    if ($("#idGrupo1")) {
+        identificatorioGrupo = 1;
+    }
+    else if ($("#idGrupo2")) {
+        identificatorioGrupo = 2;
+    }
+    else if ($("#idGrupo3")) {
+        identificatorioGrupo = 3;
+    }
+    else if ($("#idGrupo4")) {
+        identificatorioGrupo = 3;
+    }
+
+    let nombre = sessionStorage.getItem('Nombre');
     let primerEscrito = document.getElementById("primerEscrito").value;
     let primerParcial = document.getElementById("primerParcial").value;
     let segundoEscrito = document.getElementById("segundoEscrito").value;
     let segundoParcial = document.getElementById("segundoParcial").value;
     let tercerEscrito = document.getElementById("tercerEscrito").value;
     let faltas = document.getElementById("faltas").value;
-        //Se crea un nuevo objeto de tipo Promedio, y este se pushea al array alumnos
-    alumnos.push(new Promedio(primerEscrito, primerParcial, segundoEscrito, segundoParcial, tercerEscrito, faltas));
+    let idGrupo = identificatorioGrupo;
+
+    const listaAlumnos = JSON.parse(localStorage.getItem("alumnos"));
+    if (localStorage.getItem("alumnos") != null) {
+        let alumno = new Promedio(nombre, primerEscrito, primerParcial, segundoEscrito, segundoParcial, tercerEscrito, faltas, idGrupo);
+        alumno.calculoPromedio();
+        alumno.devolucion();
+
+        let alumnoExiste = false;
+        for (const i of listaAlumnos) {
+            if (i.nombre === nombre) {
+                alumnoExiste = true;
+                mensajeError();
+                setTimeout('document.forms[0].reset()', 2000);
+                btnGuardar.toggleAttribute('disabled', true)
+                console.log("Alumno already exist");
+                break
+            }
+        }
+        if (!alumnoExiste) {
+            listaAlumnos.push(alumno);
+            localStorage.setItem("alumnos", JSON.stringify(listaAlumnos));
+            mensajeExito();
+            setTimeout('document.forms[0].reset()', 2000);
+            btnGuardar.toggleAttribute('disabled', true);
+        }
+    }
+    else {
+        localStorage.clear();
+        let alumno = new Promedio(nombre, primerEscrito, primerParcial, segundoEscrito, segundoParcial, tercerEscrito, faltas, idGrupo);
+        alumno.calculoPromedio();
+        alumno.devolucion();
+        alumnos.push(alumno);
+        
+        localStorage.setItem("alumnos", JSON.stringify(alumnos));
+        mensajeExito();
+        setTimeout('document.forms[0].reset()', 2000);
+        btnGuardar.toggleAttribute('disabled', true);
+    }
     
-    alumnos.forEach(alumnos => {
-            //Para cada posicion de alumnos se llama a la funcion del objeto
-        alumnos.calculoPromedio();
-            //Se crean parrafos para mostrar en pantalla resultados
-        let resultadoNota = document.getElementById("resultadoNota");
-        resultadoNota.textContent = alumnos.promedioFinal;
-        let resultadoJuicio = document.getElementById("resultadoJuicio");
-        resultadoJuicio.textContent = alumnos.devolucion();
-    });
 }
 
-    //Se agrega evento submit
-form.addEventListener('submit', mostrar);
+function filterGrupos(){
+    
+    listadoAlumnos = JSON.parse(localStorage.getItem("alumnos"));
+
+    let listaGrupo1 = listadoAlumnos.filter(function (element) {
+        return (element.idGrupo === 1);
+    });
+
+    let listaGrupo2 = listadoAlumnos.filter(function (element) {
+        return (element.idGrupo === 2);
+    });
+
+    let listaGrupo3 = listadoAlumnos.filter(function (element) {
+        return (element.idGrupo === 3);
+    });
+
+    let listaGrupo4 = listadoAlumnos.filter(function (element) {
+        return (element.idGrupo === 4);
+    });
+
+    if ($("#idGrupo1")) {
+        mostrar(listaGrupo1);
+    }
+    else if ($("#idGrupo2")) {
+        mostrar(listaGrupo2);
+    }
+    else if ($("#idGrupo3")) {
+        mostrar(listaGrupo3);
+    }
+    else if ($("#idGrupo4")) {
+        mostrar(listaGrupo4);
+    }
+
+}
+
+function mostrar(array){
+
+    $("#imprimir").empty();
+    if (array != null) {
+        array.forEach(element => {
+            $("#imprimir").append(`
+            <div class="card col-sm-3 m-2 cardResultado" style="width: 13rem;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">${element.nombre}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted text-center">Promedio: ${element.promedioFinal}</h6>
+                    <p class="card-text text-center">${element.devolucionFinal}</p>
+                </div>
+            </div>
+            `)
+        });
+    }
+    else{
+        console.log("El array esta vacio");
+    }
+        
+    }
+    
+
+// EVENTOS
+btnGuardar.addEventListener("click", guardarDatos);
+$(".resultados").click(filterGrupos)
+//filterGrupos();
