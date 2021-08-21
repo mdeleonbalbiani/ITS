@@ -59,7 +59,7 @@ function identificaciónDeGrupo() {
         case textoTitulo === "2do IA (EMT)":
             identificatorioGrupo = 3;
             break;
-        case textoTitul === "1ero MB (EMT)":
+        case textoTitulo === "1ero MB (EMT)":
             identificatorioGrupo = 4;
             break;
         default:
@@ -185,4 +185,3 @@ function mostrar(array){
 btnGuardar.addEventListener("click", guardarDatos);
 $(".resultados").click(filterGrupos)
 filterGrupos();
-identificaciónDeGrupo()
