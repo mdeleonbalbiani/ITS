@@ -46,7 +46,6 @@ mensajeError = () => {toastr["error"]("El promedio de esta alumno ya fue calcula
 
 function identificaciónDeGrupo() {
     let textoTitulo = document.getElementsByClassName("idGrupo")[0].innerText;
-    
     //console.log(textoTitulo);
     let identificatorioGrupo = 0;
     switch (true) {
@@ -143,17 +142,22 @@ function filterGrupos(){
     console.log(listaGrupo3);
     console.log(listaGrupo4);
 
-    if ($("#idGrupo1")) {
-        mostrar(listaGrupo1);
-    }
-    else if ($("#idGrupo2")) {
-        mostrar(listaGrupo2);
-    }
-    else if ($("#idGrupo3")) {
-        mostrar(listaGrupo3);
-    }
-    else if ($("#idGrupo4")) {
-        mostrar(listaGrupo4);
+    let grupo = identificaciónDeGrupo();
+    switch (grupo) {
+        case 1:
+            mostrar(listaGrupo1);
+            break;
+        case 2:
+            mostrar(listaGrupo2);
+            break;
+        case 3:
+            mostrar(listaGrupo3);
+            break;
+        case 4:
+            mostrar(listaGrupo4);
+            break;
+        default:
+            break;
     }
 
 }
@@ -184,4 +188,4 @@ function mostrar(array){
 // EVENTOS
 btnGuardar.addEventListener("click", guardarDatos);
 $(".resultados").click(filterGrupos)
-filterGrupos();
+//filterGrupos();
