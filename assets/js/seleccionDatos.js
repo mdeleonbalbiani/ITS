@@ -16,7 +16,7 @@ seleccion.addEventListener('change', (event) => {
 
 function mostrarForm(boolean) {
     if (boolean) {
-        //sform.reset();
+        //form.reset();
         form.classList.remove('formHidden');
     }
     else{

@@ -44,23 +44,33 @@ let btnGuardar = document.getElementById("submit-btn");
 mensajeExito = () => {toastr["success"]("Calculado su promedio final y generada su devolución", "Alumno cargado exitosamente");}
 mensajeError = () => {toastr["error"]("El promedio de esta alumno ya fue calculado y guardado", "Alumno ya ingresado");}
 
+function identificaciónDeGrupo() {
+    let textoTitulo = document.getElementsByClassName("idGrupo")[0].innerText;
+    
+    //console.log(textoTitulo);
+    let identificatorioGrupo = 0;
+    switch (true) {
+        case textoTitulo === "1ero IB (EMT)":
+            identificatorioGrupo = 1;
+            break;
+        case textoTitulo === "3ero DD (EMP)":
+            identificatorioGrupo = 2;
+            break;
+        case textoTitulo === "2do IA (EMT)":
+            identificatorioGrupo = 3;
+            break;
+        case textoTitul === "1ero MB (EMT)":
+            identificatorioGrupo = 4;
+            break;
+        default:
+            identificatorioGrupo = 0;
+            break;
+    }
+    return identificatorioGrupo;
+}
 
 function guardarDatos(e){
     e.preventDefault();
-
-    let identificatorioGrupo = 0;
-    if ($("#idGrupo1")) {
-        identificatorioGrupo = 1;
-    }
-    else if ($("#idGrupo2")) {
-        identificatorioGrupo = 2;
-    }
-    else if ($("#idGrupo3")) {
-        identificatorioGrupo = 3;
-    }
-    else if ($("#idGrupo4")) {
-        identificatorioGrupo = 3;
-    }
 
     let nombre = sessionStorage.getItem('Nombre');
     let primerEscrito = document.getElementById("primerEscrito").value;
@@ -69,14 +79,15 @@ function guardarDatos(e){
     let segundoParcial = document.getElementById("segundoParcial").value;
     let tercerEscrito = document.getElementById("tercerEscrito").value;
     let faltas = document.getElementById("faltas").value;
-    let idGrupo = identificatorioGrupo;
+    let idGrupo = identificaciónDeGrupo();
 
-    const listaAlumnos = JSON.parse(localStorage.getItem("alumnos"));
-    if (localStorage.getItem("alumnos") != null) {
-        let alumno = new Promedio(nombre, primerEscrito, primerParcial, segundoEscrito, segundoParcial, tercerEscrito, faltas, idGrupo);
+    let alumno = new Promedio(nombre, primerEscrito, primerParcial, segundoEscrito, segundoParcial, tercerEscrito, faltas, idGrupo);
         alumno.calculoPromedio();
         alumno.devolucion();
 
+    const listaAlumnos = JSON.parse(localStorage.getItem("alumnos"));
+    if (localStorage.getItem("alumnos") != null) {
+        
         let alumnoExiste = false;
         for (const i of listaAlumnos) {
             if (i.nombre === nombre) {
@@ -98,11 +109,7 @@ function guardarDatos(e){
     }
     else {
         localStorage.clear();
-        let alumno = new Promedio(nombre, primerEscrito, primerParcial, segundoEscrito, segundoParcial, tercerEscrito, faltas, idGrupo);
-        alumno.calculoPromedio();
-        alumno.devolucion();
         alumnos.push(alumno);
-        
         localStorage.setItem("alumnos", JSON.stringify(alumnos));
         mensajeExito();
         setTimeout('document.forms[0].reset()', 2000);
@@ -130,6 +137,11 @@ function filterGrupos(){
     let listaGrupo4 = listadoAlumnos.filter(function (element) {
         return (element.idGrupo === 4);
     });
+
+    console.log(listaGrupo1);
+    console.log(listaGrupo2);
+    console.log(listaGrupo3);
+    console.log(listaGrupo4);
 
     if ($("#idGrupo1")) {
         mostrar(listaGrupo1);
@@ -172,4 +184,5 @@ function mostrar(array){
 // EVENTOS
 btnGuardar.addEventListener("click", guardarDatos);
 $(".resultados").click(filterGrupos)
-//filterGrupos();
+filterGrupos();
+identificaciónDeGrupo()
