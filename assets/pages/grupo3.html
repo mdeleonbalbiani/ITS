@@ -129,7 +129,7 @@
             <div class="modal-body">
                 <div>
                     <img src="../imgs/grupo.png" alt="iconGrupo" class="iconoGrupo">
-                    <div class="imprimir row" id="imprimir">
+                    <div class="imprimir row" id="imprimirPromedios">
 
                     </div>
                 </div>
@@ -142,11 +142,12 @@
     </div>
     <!-- Modal Mejor Alumno -->
     <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
                 <div>
-                    <img src="../imgs/grupo.png" alt="iconGrupo" class="iconoGrupo">
+                    <img src="../imgs/mejor.png" alt="iconGrupo" class="iconoMejorEstudiante">
+                    <h3 class="h3MejorEstudiante">Estudiante con mejor promedio</h3>
                     <div class="imprimir row" id="imprimirAlumno">
 
                     </div>
@@ -161,11 +162,13 @@
 
     <!-- Modal Grafica -->
     <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-body">
+            <div class="modal-body contenedorGrafica">
                 <h3>Gráfica de aprobación del grupo</h3>
-                <canvas id="grafica" width="400" height="400"></canvas>
+                <div id="imprimirGrafica">
+                    <canvas id="grafica"></canvas>
+                </div>
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
