@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Martina De Leon">
+    <meta name="description" content="En esta web podrás calcular el promedio de cada uno de tus alumnos, ver una gráfica de aprobación y así llevar correctamente la organización, haciendo más ágil la llegada de la información a adscripción">
+    <meta name="keywords" content="EDUCACIÓN, EDUCACION, PROFESORES, PROFESOR, PROFESORA, PROMEDIO, ALUMNOS, INSTITUTO, ITS, INSTITUTO TECNOLOGICO EN SUEÑOS">
     <link rel="icon" href="../imgs/icon.png">
-    
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!--Fuentes-->
     <link href="https://fonts.googleapis.com/css2?family=League+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
-    <!--CSS-->
+    <!--CSS externo y personalizado-->
     <link rel="stylesheet" href="../plugin/toastr/toastr.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">   
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">  
+
     <title>I.T.S - 2do IA</title>
 </head>
 <body>
@@ -23,8 +26,8 @@
             <img src="../imgs/logo.png" alt="Logo" style="width: 35%;">
         </section>
 
-        
         <section class="container centrar row">
+            <!--Select de alumnos-->
             <div class="col-8 div">
                 <h3 class="idGrupo" id="idGrupo3">2do IA (EMT)</h3>
                 <div class="form-group">
@@ -45,8 +48,7 @@
                     </select>
                 </div>
             </div>
-           
-    
+           <!-- Contenedor de botones -->
             <div class="btn_wrap col-4">
                 <span>Ver info</span>
                 <div class="contenedorBotones">
@@ -55,12 +57,8 @@
                     <a type="button" class="btn resultados" data-bs-toggle="modal" data-bs-target="#modal2"><i class="fas fa-chart-pie"></i></i></a>
                 </div>
             </div>
-    
-        
         </section>
-
     </header>
-
     <!-- Breadcrumb -->
     <nav style="--bs-breadcrumb-divider: '>' " aria-label="breadcrumb" class="breadcrumbCustomise">
         <ol class="breadcrumb">
@@ -68,8 +66,9 @@
             <li class="breadcrumb-item active">Página actual</li>
         </ol>
     </nav>
-
+    <!--Sección principal-->
     <section class="container contenedor">
+        <!--Form de ingreso de datos-->
         <div>
             <form action="" class="form formHidden" id="user-form" autocomplete="off">
                 <!--Escrito 1-->
@@ -78,55 +77,46 @@
                     <input type="text" id="primerEscrito" name="primerEscrito" class="col-sm-8">
                     <small class="error-text">*Introduce una nota válida. Solo números entre 1 y 12</small>
                 </div>
-        
                 <!--Parcial 1-->
                 <div class="form-box form-group row">
                     <label for="primerParcial" class="col-sm-4 col-form-label">Primer parcial</label>
                     <input type="text" id="primerParcial" name="primerParcial" class="col-sm-8">
                     <small class="error-text">*Introduce una nota válida. Solo números entre 1 y 12</small>
                 </div>
-        
                 <!--Escrito 2-->
                 <div class="form-box form-group row">
                     <label for="segundoEscrito" class="col-sm-4 col-form-label">Escrito Julio/Agosto</label>
                     <input type="text" id="segundoEscrito" name="segundoEscrito" class="col-sm-8">
                     <small class="error-text">*Introduce una nota válida. Solo números entre 1 y 12</small>
                 </div>
-        
                 <!--Parcial 2-->
                 <div class="form-box form-group row">
                     <label for="segundoParcial" class="col-sm-4 col-form-label">Segundo parcial</label>
                     <input type="text" id="segundoParcial" name="segundoParcial" class="col-sm-8">
                     <small class="error-text">*Introduce una nota válida. Solo números entre 1 y 12</small>
                 </div>
-        
                 <!--Escrito 3-->
                 <div class="form-box form-group row">
                     <label for="tercerEscrito" class="col-sm-4 col-form-label">Escrito Octubre/Noviembre</label>
                     <input type="text" id="tercerEscrito" name="tercerEscrito" class="col-sm-8">
                     <small class="error-text">*Introduce una nota válida. Solo números entre 1 y 12</small>
                 </div>
-        
                 <!--Faltas-->
                 <div class="form-box form-group row">
                     <label for="faltas" class="col-sm-4 col-form-label">Número de faltas</label>
                     <input type="text" id="faltas" name="faltas" class="col-sm-8">
                     <small class="error-text">*Introduce una número de faltas válido. Solo números mayores a 1</small>
                 </div>
-        
                 <!--Boton-->
                 <button type="submit" id="submit-btn" disabled>Calcular</button>
             </form>
-    
         </div>
-        
-
+        <!--Boton e impresión de calendario de feriados-->
         <div class="calendario text-center">
             <button type="button"  id="botonCalendario">Mostrar calendario de feriados</button>
             <div id="feriados" class="row ">
             </div>
         </div>
-
     </section>
 
      <!-- Modal Promedios -->
@@ -183,9 +173,7 @@
         </div>
         </div>
     </div>
-
-
-
+    <!--Footer-->
     <footer class="text-center text-lg-start">
         <div class="text-center p-3 text-white">
         © 2021 Copyright:
@@ -193,18 +181,18 @@
         </div>
     </footer>
 
-
-    <!--JQuery-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="../plugin/toastr/toastr.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
-
-    <!--Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="../js/validaciones.js"></script>
-    <script src="../js/seleccionDatos.js"></script>
-    <script src="../js/app.js"></script>
-    <script src="../js/api.js"></script>
-
+    <!--Linkeo de scripts-->
+        <!--JQuery-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!--Plugin y libreria de grafica-->
+        <script src="../plugin/toastr/toastr.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+        <!--Bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!--Scripts personalizados-->
+        <script src="../js/validaciones.js"></script>
+        <script src="../js/seleccionDatos.js"></script>
+        <script src="../js/api.js"></script>
+        <script src="../js/app.js"></script>
 </body>
 </html>
