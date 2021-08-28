@@ -17,7 +17,7 @@ class Promedio{
         let promedioParciales = (this.primerParcial + this.segundoParcial)*0.75;
         let promedioEscritos = (this.primerEscrito + this.segundoEscrito + this.tercerEscrito)*0.25;
         let promedio = (promedioEscritos + promedioParciales)/2;
-        if (promedio < 12) {
+        if (promedio > 12) {
             promedio = 12;
         }
         return this.promedioFinal = promedio;
@@ -122,6 +122,7 @@ function guardarDatos(e){
 }
 
 function filterArray(){
+    /* $("#imprimirGrafica").empty(); */
     listadoAlumnos = JSON.parse(localStorage.getItem("alumnos"));
 
     if (listadoAlumnos != null) {
@@ -288,7 +289,6 @@ function mostrarAlumno(alumno) {
 }
 
 function mostrarGrafica(nroAprobados, nroDesaprobados) {
-    
     let grafica = $("#grafica");
     let xValues = ["Aprobados", "Desaprobados"];
     let yValues = [nroAprobados, nroDesaprobados];
@@ -318,6 +318,10 @@ function mostrarGrafica(nroAprobados, nroDesaprobados) {
     });
 }
     
+function recargarPagina() {
+    location.reload();
+    console.log("recargada");
+}
 
 // EVENTOS
 btnGuardar.addEventListener("click", guardarDatos);

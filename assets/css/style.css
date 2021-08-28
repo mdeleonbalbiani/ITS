@@ -6,13 +6,14 @@ header{
     margin-top: -3%;
 }
 h1{
-    font-family: 'League Script', cursive;
+    font-family: 'Shadows Into Light', cursive;
     text-align: center;
-    font-size: 2.8rem;
+    font-size: 3.5rem;
     margin-top: -2%;
     font-weight: bold;
     color: #ebba3f;
     text-shadow: 2px 1px 0 #000000;
+    letter-spacing: 5px;
 }
 h2{
     font-size: 1.5rem;
@@ -31,12 +32,15 @@ footer{
     background: linear-gradient(rgb(53, 53, 53), rgb(74, 79, 80));
 }
 .infoDocente{
+    color: white;
+    margin-top: 2%;
     display: flex;
     justify-content: space-evenly;
 }
 .subtitle{
     margin-left: 10%;
     margin-bottom: -0.2%;
+    text-shadow: 2px 1px 0 #eb8f17;
 }
 .btnVer{
     width: 50%;
@@ -47,9 +51,14 @@ table{
     margin-bottom: 3%;
     table-layout: auto;
     text-align: center;
+    font-weight: bold;
     border: 1px solid white;
     border-collapse: separate;
     border-spacing: 10px;
+    background-color: #0074D9;
+    box-shadow: 0px 2px 19px -5px rgba(187,183,183,0.92);
+-webkit-box-shadow: 0px 2px 19px -5px rgba(187,183,183,0.92);
+-moz-box-shadow: 0px 2px 19px -5px rgba(187,183,183,0.92);
 }
 .contenedorLogin{
     width: 45%;
@@ -226,8 +235,9 @@ th, td {
 
 
 header{
-background:#005df4;
-padding-bottom: 2%;
+    background-color: #0074D9;
+    padding-bottom: 2%;
+/* background:#005df4; */
 box-shadow: 1px 6px 3px rgba(51, 49, 49, 0.712);
 -webkit-box-shadow:  1px 6px 3px rgba(51, 49, 49, 0.712);
 -moz-box-shadow:  1px 6px 3px rgba(51, 49, 49, 0.712);
@@ -370,3 +380,50 @@ span {
 .contenedorGrafica h3{
     text-shadow: 3px 5px 2px #474747, 0px 0px 8px #FFA727;
 }
+
+
+
+/** CSS using pseudo-elements: **/
+
+#A {
+    background: #0074D9;
+  }
+  
+  #B {
+    background: #7FDBFF;
+    margin-top: -5%;
+  }
+  
+  #A::after {
+    margin-top: -5%;
+    content: "";
+    position: relative;
+    left: -3rem;
+    /* padding * -1 */
+    top: calc( 3rem - 4rem / 2);
+    /* padding - height/2 */
+    float: left;
+    display: block;
+    height: 2rem;
+    width: 98.9vw;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 70 500 60' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='500' height='500' style='stroke: none; fill: %237FDBFF;' /%3E%3Cpath d='M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z' style='stroke: none; fill: %230074D9;'%3E%3C/path%3E%3C/svg%3E");
+    background-size: 100% 100%;
+  }
+  #A,
+  #B {
+    padding: 3rem;
+  }
+
+  #headerIndex{
+    margin-top: -5%;
+    padding-bottom: 0%;
+  }
+
+  img{
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+  }
+
+  .breadcrumbCustomise{
+      margin-top: 1%;
+      margin-left: 2%;
+  }
