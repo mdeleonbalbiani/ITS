@@ -210,7 +210,7 @@ function filtrarArrayMejorAlumno() {
                 break;
         }
     }else {
-        console.log("Todavía no hay alumnos ingresados para calcular el mejor");
+        console.log("No hay ingresos de alumnos");
     }
 }
 /*Se filtra el array de todos los grupos y se crean dos nuevos array, los alumnos aprobados y los alumnos desaprobados */
@@ -305,16 +305,18 @@ function mostrarPromedios(array){
 
 //Función que imprime en pantalla el alumno con mejor nota
 function mostrarAlumno(alumno) {
-    $("#imprimirAlumno").empty();
-    $("#imprimirAlumno").append(`
-        <div class="card col-sm-3 m-2 cardResultado" style="width: 13rem;">
-            <div class="card-body">
-                <h5 class="card-title text-center text-white">${alumno.nombre}</h5>
-                <h6 class="card-subtitle mb- text-center text-warning">Promedio: ${alumno.promedioFinal}</h6>
-                <p class="card-text text-center text-white">${alumno.devolucionFinal}</p>
+    if (alumno != null) {
+        $("#imprimirAlumno").empty();
+        $("#imprimirAlumno").append(`
+            <div class="card col-sm-3 m-2 cardResultado" style="width: 13rem;">
+                <div class="card-body">
+                    <h5 class="card-title text-center text-white">${alumno.nombre}</h5>
+                    <h6 class="card-subtitle mb- text-center text-warning">Promedio: ${alumno.promedioFinal}</h6>
+                    <p class="card-text text-center text-white">${alumno.devolucionFinal}</p>
+                </div>
             </div>
-        </div>
-        `)
+            `)
+    }else{ console.log("Todavía no hay alumnos ingresados para calcular el mejor");    }
 }
 
 //Función que crea la grafica de aprobados y desaprobados del grupo
