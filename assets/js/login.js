@@ -20,4 +20,4 @@ $("#submit").click(()=>{
 $("#cerrarSesion").click(()=>{
     localStorage.removeItem("Sesión iniciada");
     window.location = "login.html";
-})
+});

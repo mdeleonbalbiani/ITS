@@ -14,8 +14,8 @@ class Promedio{
         this.idGrupo = idGrupo;
     }
     calculoPromedio(){
-        /* **Ambos parciales tienen un peso del 75% del total del promedio final** 
-           **Los tres escritos tienen un peso del restante 25%** */
+        /* ** Ambos parciales tienen un peso del 75% del total del promedio final ** 
+           ** Los tres escritos tienen un peso del restante 25% ** */
         let promedioParciales = (this.primerParcial + this.segundoParcial)*0.75;
         let promedioEscritos = (this.primerEscrito + this.segundoEscrito + this.tercerEscrito)*0.25;
         let promedio = (promedioEscritos + promedioParciales)/2;
@@ -24,8 +24,8 @@ class Promedio{
         return this.promedioFinal = promedio;
     }
     devolucion() {
-        /* **El alumno debe tener como minimo 22 clases asistidas**
-           **De otra forma, sin importar el promedio obtenido, deberá recursar la materia** */
+        /* ** El alumno debe tener como minimo 22 clases asistidas **
+           ** De otra forma, sin importar el promedio obtenido, deberá recursar la materia ** */
         if (this.faltas < 22) {
             if (this.promedioFinal < 7 && this.promedioFinal >= 4) {
                 return this.devolucionFinal = "El alumno debe rendir examen en diciembre";
@@ -128,7 +128,7 @@ function guardarDatos(e){
     
 }
 
-/*Se filtra el array de todos los alumnos y se crea un nuevo array para cada grupo */
+/*Se filtra el array de todos los alumnos y se crea un nuevo array para cada grupo, quedando guardados en el sessionStorage */
 function filtrarArrayPorGrupos() {
     listadoAlumnos = JSON.parse(localStorage.getItem("alumnos"));
     if (listadoAlumnos != null) {
@@ -149,6 +149,7 @@ function filtrarArrayPorGrupos() {
         sessionStorage.setItem('Lista Grupo 3', JSON.stringify(listaGrupo3));
         sessionStorage.setItem('Lista Grupo 4', JSON.stringify(listaGrupo4));
 
+        //Se llama a la función que imprime en pantalla los promedios de todos los alumnos de grupo
         let grupo = identificaciónDeGrupo();
         switch (grupo) {
             case 1:
@@ -192,6 +193,7 @@ function filtrarArrayMejorAlumno() {
         let mayoresNotasGrupo4 = listaGrupo4.sort(((a, b) => b.promedioFinal - a.promedioFinal));
         let alumnoGrupo4 = mayoresNotasGrupo4[0];
 
+        //Se llama a la función que imprime en pantalla los alumnos con mayores notas de cada grupo
         let grupo = identificaciónDeGrupo();
         switch (grupo) {
             case 1:
@@ -266,6 +268,7 @@ function filtrarArrayPorAprobacion(){
             }
         });
 
+        //Se llama a la función que imprime en pantalla la grafica de aprobación de cada grupo
         let grupo = identificaciónDeGrupo();
         switch (grupo) {
             case 1:
@@ -287,6 +290,7 @@ function filtrarArrayPorAprobacion(){
         console.log("No se pude generar gráfica aún");
     }
 }
+
 //Función que imprime en pantalla los resultados de los promedios
 function mostrarPromedios(array){
     $("#imprimirPromedios").empty();
