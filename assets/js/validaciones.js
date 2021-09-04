@@ -29,7 +29,7 @@ document.querySelectorAll('.form-box').forEach((box) => {
 validation = (box, boxInput) => {
 
     if (boxInput.name == 'primerEscrito') {
-        if ((boxInput.value < 0) || (boxInput.value > 12) || (isNaN(boxInput.value)) || (boxInput.value==="")) {
+        if ((boxInput.value <= 0) || (boxInput.value > 12) || (isNaN(boxInput.value)) || (boxInput.value==="")) {
             showError(true, box, boxInput);
           } else {
             showError(false, box, boxInput);
@@ -37,7 +37,7 @@ validation = (box, boxInput) => {
     }
 
     if (boxInput.name == 'primerParcial') {
-        if ((boxInput.value < 0) || (boxInput.value > 12) || (isNaN(boxInput.value)) || (boxInput.value==="")) {
+        if ((boxInput.value <= 0) || (boxInput.value > 12) || (isNaN(boxInput.value)) || (boxInput.value==="")) {
             showError(true, box, boxInput);
           } else {
             showError(false, box, boxInput);
@@ -45,7 +45,7 @@ validation = (box, boxInput) => {
     }
 
     if (boxInput.name == 'segundoEscrito') {
-        if ((boxInput.value < 0) || (boxInput.value > 12) || (isNaN(boxInput.value)) || (boxInput.value==="")) {
+        if ((boxInput.value <= 0) || (boxInput.value > 12) || (isNaN(boxInput.value)) || (boxInput.value==="")) {
             showError(true, box, boxInput);
           } else {
             showError(false, box, boxInput);
@@ -53,7 +53,7 @@ validation = (box, boxInput) => {
     }
 
     if (boxInput.name == 'segundoParcial') {
-        if ((boxInput.value < 0) || (boxInput.value > 12) || (isNaN(boxInput.value)) || (boxInput.value==="")) {
+        if ((boxInput.value <= 0) || (boxInput.value > 12) || (isNaN(boxInput.value)) || (boxInput.value==="")) {
             showError(true, box, boxInput);
           } else {
             showError(false, box, boxInput);
@@ -61,7 +61,7 @@ validation = (box, boxInput) => {
     }
 
     if (boxInput.name == 'tercerEscrito') {
-        if ((boxInput.value < 0) || (boxInput.value > 12) || (isNaN(boxInput.value)) || (boxInput.value==="")) {
+        if ((boxInput.value <= 0) || (boxInput.value > 12) || (isNaN(boxInput.value)) || (boxInput.value==="")) {
             showError(true, box, boxInput);
           } else {
             showError(false, box, boxInput);

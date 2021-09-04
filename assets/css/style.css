@@ -45,9 +45,15 @@ img{
 }
 
 /*INDEX*/
+#bodyIndex{
+    background: #7FDBFF;
+}
 #headerIndex{
     margin-top: -5%;
     padding-bottom: 0%;
+    box-shadow: 0px 0px 0px;
+        -webkit-box-shadow: 0px 0px 0px;
+        -moz-box-shadow:  0px 0px 0px;
 }
 #A {
     background: #0074D9;
@@ -75,8 +81,7 @@ img{
     padding: 3rem;
 }
 .infoDocente{
-    color: white;
-    margin-top: 2%;
+    color: black;
     display: flex;
     justify-content: space-evenly;
 }
@@ -87,7 +92,8 @@ img{
     border: 2px solid #0074D9;
     padding: 14px 40px;
     outline: none;
-    color: white;
+    color: black;
+    font-weight: bold;
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
@@ -112,14 +118,18 @@ table{
     font-weight: bold;
     border-collapse: separate;
     border-spacing: 1%;
-    background-color: rgba(255, 255, 255, 0.137);
+    background-color: #0074d944;
     box-shadow: 0px 2px 19px -5px rgba(187,183,183,0.92);
         -webkit-box-shadow: 0px 2px 19px -5px rgba(187,183,183,0.92);
         -moz-box-shadow: 0px 2px 19px -5px rgba(187,183,183,0.92);
 }
 th, td {
     padding: 1%;
-    color: rgb(255, 209, 124);
+    color: rgb(54, 54, 54);
+}
+.footerIndex{
+    background: #0074d944;
+    background: linear-gradient(#0074d944, #0074d9b9);
 }
 
 /*CADA GRUPO*/
