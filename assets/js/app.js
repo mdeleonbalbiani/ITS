@@ -321,11 +321,21 @@ function mostrarAlumno(alumno) {
 
 //Función que crea la grafica de aprobados y desaprobados del grupo
 function mostrarGrafica(nroAprobados, nroDesaprobados) {
+
+    if ( $("#grafica").length > 0 ) {
+        $("#imprimirGrafica").empty();
+        $("#imprimirGrafica").append(
+            `<canvas id="grafica"></canvas>`
+        );
+    }
+    $("#imprimirGrafica").append(
+        `<canvas id="grafica"></canvas>`
+    );
     let grafica = $("#grafica");
     let xValues = ["Aprobados", "Desaprobados"];
     let yValues = [nroAprobados, nroDesaprobados];
     let barColors = ["green", "red"];
-
+    
     new Chart(grafica, {
         type: "doughnut",
         data: {
@@ -348,6 +358,8 @@ function mostrarGrafica(nroAprobados, nroDesaprobados) {
             }
         }
     });
+
+
 }
 // EVENTOS
 btnGuardar.addEventListener("click", guardarDatos);

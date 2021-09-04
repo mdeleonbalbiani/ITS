@@ -94,7 +94,7 @@ showError = (check, box, boxInput) => {
 
 //Funcion para habilitar o deshabilitar el boton
 function submitController(){
-    if (errors.nombre|| errors.primerEscrito || errors.primerParcial || errors.segundoEscrito || errors.segundoParcial || errors.tercerEscrito || errors.faltas) {
+    if (errors.primerEscrito || errors.primerParcial || errors.segundoEscrito || errors.segundoParcial || errors.tercerEscrito || errors.faltas) {
         submitButton.attr('disabled', true)
     } else {
         submitButton.attr('disabled', false)
