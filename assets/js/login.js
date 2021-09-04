@@ -7,7 +7,7 @@ $("#submit").click(()=>{
     
     if (usuario == "0000001" && pass == "user"){ 
         window.location = "index.html";
-        localStorage.getItem("Sesión iniciada", true)
+        localStorage.setItem("Sesión iniciada", true)
     } 
     else{ 
         $(".errorLogin").removeAttr("hidden")
