@@ -6,7 +6,7 @@ $("#submit").click(()=>{
     pass = document.getElementById("pass").value;
     
     if (usuario == "0000001" && pass == "user"){ 
-        window.location = "index.html";
+        window.location = "assets/pages/main.html";
         localStorage.setItem("Sesión iniciada", true)
     } 
     else{ 
@@ -19,5 +19,5 @@ $("#submit").click(()=>{
 //Cerrar sesión
 $("#cerrarSesion").click(()=>{
     localStorage.removeItem("Sesión iniciada");
-    window.location = "login.html";
+    window.location = "../../index.html";
 });

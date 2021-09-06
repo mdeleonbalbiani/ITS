@@ -24,7 +24,7 @@ class Promedio{
         return this.promedioFinal = promedio;
     }
     devolucion() {
-        /* ** El alumno debe tener como minimo 22 clases asistidas **
+        /* ** El alumno debe tener como maximo 22 faltas **
            ** De otra forma, sin importar el promedio obtenido, deberá recursar la materia ** */
         if (this.faltas < 22) {
             if (this.promedioFinal < 7 && this.promedioFinal >= 4) {
