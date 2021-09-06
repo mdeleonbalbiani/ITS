@@ -6,7 +6,7 @@ body {
     background: #000;
 }
 header{
-    background-color: #0074D9;
+    background-color: #7FDBFF;
     text-align: center;
     margin-top: -3%;
     padding-bottom: 2%;
@@ -251,8 +251,8 @@ form{
 .calendario button{
     margin-bottom: 2%;
     padding: 15px;
-    background: #3681fa;
-    border: 1px solid #3681fa;
+    background: #0074D9;
+    border: 1px solid #0074D9;
     border-radius: 5px;
     color: #fff;
     font-weight: bold;
@@ -316,13 +316,12 @@ span {
     width: 240px;
     height: 72px;
     border-radius: 80px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
     text-align: center;
     line-height: 70px;
     letter-spacing: 2px;
     color: #EEEEED;
-    background-color: #1F1E1E;
+    background-color: #0074D9;
     padding: 0 18px;
     -webkit-transition: all 1.2s ease;
     transition: all 1.2s ease;
